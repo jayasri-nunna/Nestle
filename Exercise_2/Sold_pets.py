@@ -2,7 +2,7 @@ import requests
 
 from Nestle.Exercise_2.Create_user import base_url, header
 
-#Function to retrieve the sold pets, tried to use pagination but got to know that the test api does not support it from documentation
+#Function to retrieve sold pets
 def sold_pets_func():
     sold_pets_list = []
     sold_pets_response = requests.get(url=base_url+"pet/findByStatus", params={'status' : 'sold'}, headers=header)
